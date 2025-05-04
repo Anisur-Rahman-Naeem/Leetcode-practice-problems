@@ -7,6 +7,7 @@ public class valid_palindrome_II {
         String input = scanner.nextLine();
         boolean result = validPalindrome(input);
         System.out.println(result);
+        scanner.close();
     }
 
     static boolean validPalindrome(String s){
