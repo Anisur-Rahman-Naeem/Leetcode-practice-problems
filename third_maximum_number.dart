@@ -1,26 +1,27 @@
 
 class Solution {
   int thirdMax(List<int> nums) {
-    nums.sort((a, b) => b.compareTo(a));
+    int? max1, max2,max3;
 
-    var thirdDistinct = 0;
+    for(var element in nums){
 
-    List<int> topThree = [];
+        if(max1 == element|| max2 == element || max3 == element){
+            continue;
+        }
 
-    for (var element in nums) {
-      if (!topThree.contains(element)) {
-        topThree.add(element);
-      }
+
+        if(max1 == null || element > max1){
+            max3 = max2;
+            max2 = max1;
+            max1 = element;
+        } else if(max2 == null || element > max2){
+            max3 = max2;
+            max2 = element;
+        } else if(max3 == null || element > max3){
+            max3 = element;
+        }
     }
 
-    if (topThree.length == 2) {
-      thirdDistinct = topThree[0];
-    } else if (topThree.length == 1) {
-      thirdDistinct = topThree[0];
-    } else if (topThree.length > 2) {
-      thirdDistinct = topThree[2];
-    }
-
-    return thirdDistinct;
+    return max3?? max1!;
   }
 }
