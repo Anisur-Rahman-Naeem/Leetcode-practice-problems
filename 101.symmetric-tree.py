@@ -25,11 +25,11 @@ class Solution(object):
                 return True
             if not t1 or not t2:
                 return False
-            return (t1.val == t2.val and 
+            return (t1.val == t2.val and
             isSymmetric(t1.left, t2.right) and
             isSymmetric(t1.right, t2.left))
         
-        return isSymmetric(root.left, root.right)
+        return isSymmetric(root.left, root)
 
         _
 # @lc code=end
