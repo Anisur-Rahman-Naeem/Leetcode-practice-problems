@@ -9,7 +9,6 @@ class Solution {
             continue;
         }
 
-
         if(max1 == null || element > max1){
             max3 = max2;
             max2 = max1;
