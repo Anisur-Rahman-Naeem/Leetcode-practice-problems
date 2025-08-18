@@ -16,7 +16,7 @@ class Solution(object):
             if word.isdigit():
 
                 if int(word) > max_value:
-                    max_value = int(word)
+                    max_value = int(word) 
             else:
 
                 if len(word) > max_value:
