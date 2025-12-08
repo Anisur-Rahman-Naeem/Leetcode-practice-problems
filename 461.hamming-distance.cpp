@@ -15,7 +15,7 @@ public:
             result = result & (result -1);
             count++;
         }
-        
+        return count;
     }
 };
 // @lc code=end
