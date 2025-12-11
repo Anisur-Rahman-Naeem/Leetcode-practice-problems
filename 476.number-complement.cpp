@@ -15,12 +15,12 @@ public:
         std::string binary = bitset<32>(num).to_string();
         int result = num;
         
-        for (int i = 1; i <= binary.size(); i++)
-        {
-            num = num | (num >> 1);
-        }
+        for (int i = 1; i <= binary.size(); i++)//
+        {                                       //creating
+            num = num | (num >> 1);             //mask
+        }                                       //
         
-        int result = result ^ num;
+        int result = result ^ num;//flipping the bits
 
         return result;
     }
