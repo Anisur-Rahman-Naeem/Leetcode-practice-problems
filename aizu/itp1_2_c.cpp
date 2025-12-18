@@ -5,40 +5,35 @@ int main()
 {
     int a, b, c;
     cin >> a >> b >> c;
-    if (a>b)
+    if (a > b)
     {
-        if (c<b)
+        if (c < b)
         {
-            cout<<c<<" "<<b<<" "<<a<<endl;
+            cout << c << " " << b << " " << a << endl;
+        }
+
+        else if (c < a)
+        {
+            cout << b << " " << c << " " << a << endl;
         }
         else
         {
-            if (c<a)
-            {
-                cout<<b<<" "<<c<<" "<<a<<endl;
-            }
-            else
-            {
-                cout<<b<<" "<<a<<" "<<c<<endl;
-            }
-
+            cout << b << " " << a << " " << c << endl;
         }
-    } else
-    {
-        if (c<a)
-        {
-            cout<<c<<" "<<a<<" "<<b<<endl;
-        }
-        else if (c<b)
-        {
-            cout<<a<<" "<<c<<" "<<b<<endl;
-        } else
-        {
-            cout<<a<<" "<<b<<" "<<c<<endl;
-        }
-        
     }
-    
-    
+
+    else if (c < a)
+    {
+        cout << c << " " << a << " " << b << endl;
+    }
+    else if (c < b)
+    {
+        cout << a << " " << c << " " << b << endl;
+    }
+    else
+    {
+        cout << a << " " << b << " " << c << endl;
+    }
+
     return 0;
 }
